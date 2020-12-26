@@ -1,0 +1,6 @@
+<div class="note-list">
+  <app-note-add></app-note-add>
+  <div class="note-item" *ngFor="let note of notesService.allNotes$ | async ">
+    <app-note [note]="note"></app-note>
+  </div>
+</div>

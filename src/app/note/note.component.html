@@ -5,5 +5,5 @@
     <div class="note__created">{{note.created}}</div>
   </div>
 
-  <button class="note__delete-button" (click)="deleteNote()">x</button>
+  <button class="note__delete-button" (click)="notesService.delete$.next(note._id)">x</button>
 </div>

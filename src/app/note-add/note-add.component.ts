@@ -26,7 +26,7 @@ export class NoteAddComponent implements OnInit {
 
   public createNote(): void {
     if (this.isNoteValid()) {
-      this.notesService.createNote(this.noteForm.value);
+      this.notesService.create$.next(this.noteForm.value);
       this.noteForm.reset();
     }
   }

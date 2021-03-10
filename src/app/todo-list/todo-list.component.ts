@@ -10,6 +10,5 @@ export class TodoListComponent implements OnInit {
   constructor(readonly notesService: NotesService) { }
 
   ngOnInit() {
-    this.notesService.fetchAll();
   }
 }

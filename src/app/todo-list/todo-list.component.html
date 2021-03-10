@@ -1,5 +1,7 @@
 <div class="note-list">
   <app-note-add></app-note-add>
+  <div *ngIf="notesService.inProgress$ | async" style="font-size:100px">OMG PROGRESS  !!! !1!!11!11!!11</div>
+  <div *ngIf="notesService.error$ | async" style="font-size:100px">OMG {{notesService.error$ | async}}</div>
   <div class="note-item" *ngFor="let note of notesService.allNotes$ | async ">
     <app-note [note]="note"></app-note>
   </div>

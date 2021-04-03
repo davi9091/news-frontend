@@ -4,4 +4,3 @@ export interface INote {
   title: string;
   created?: string;
 }
-

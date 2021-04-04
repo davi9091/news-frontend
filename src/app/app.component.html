@@ -1,4 +1,13 @@
 <div>
+
+  <nav>
+    <li>
+      <ul><a routerLink="/" routerLinkActive="active">main</a></ul>
+      <ul><a routerLink="/login" routerLinkActive="active">login</a></ul>
+    </li>
+  </nav>
+
   <app-user-bar></app-user-bar>
-  <app-todo-list></app-todo-list>
+  <router-outlet></router-outlet>
+<!--  <app-todo-list></app-todo-list>-->
 </div>

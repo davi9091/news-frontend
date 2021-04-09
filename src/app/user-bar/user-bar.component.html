@@ -1,3 +1,9 @@
 <div class="user-bar">
-  <button (click)="onLoginClick()">Login</button>
+  <ng-container *ngIf="(authService.isLoggedIn$ | async); then username else loginButton"></ng-container>
+  <ng-template #username>
+    {{(authService.user$ | async).username}}
+  </ng-template>
+  <ng-template #loginButton>
+    <button *ngIf="!(authService.isLoggedIn$ | async)" (click)="onLoginClick()">Login</button>
+  </ng-template>
 </div>

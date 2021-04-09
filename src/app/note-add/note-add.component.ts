@@ -11,13 +11,13 @@ export class NoteAddComponent implements OnInit {
   public noteForm: FormGroup;
 
   constructor(private notesService: NotesService, private formBuilder: FormBuilder) {
+  }
+
+  ngOnInit() {
     this.noteForm = this.formBuilder.group({
       title: '',
       body: '',
     });
-  }
-
-  ngOnInit() {
   }
 
   public isNoteValid(): boolean {

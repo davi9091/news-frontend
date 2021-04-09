@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IUser} from '../types/user';
+import {AuthService} from '../auth-service/auth.service';
 
 @Component({
   selector: 'app-user-bar',
@@ -7,9 +8,7 @@ import {IUser} from '../types/user';
   styleUrls: ['./user-bar.component.less']
 })
 export class UserBarComponent implements OnInit {
-  @Input('user') user: IUser;
-
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
